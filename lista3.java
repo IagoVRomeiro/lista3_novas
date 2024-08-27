@@ -93,7 +93,12 @@ class Livro {
 
     @Override
     public String toString() {
-        return this.getAutor_principal() + ". " + this.getTitulo() + ". " + this.getAno_publicacao() + ". ISBN: " + this.getISBN() + ". ";
+        if(this.getSegundo_autor().equals("")){
+        return this.getAutor_principal() +". " + this.getTitulo() + ". " + this.getAno_publicacao() + ". ISBN: " + this.getISBN() + ". ";
+        }
+        else{
+        return this.getAutor_principal() + ", " + this.getSegundo_autor() +". " + this.getTitulo() + ". " + this.getAno_publicacao() + ". ISBN: " + this.getISBN() + ". ";
+        }
     }
 
     public void imprimir() {
